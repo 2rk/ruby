@@ -46,27 +46,27 @@ Airbnb also maintains a [JavaScript Style Guide][airbnb-javascript].
 
     ```Ruby
     case
-    when song.name == 'Misty'
-      puts 'Not again!'
-    when song.duration > 120
-      puts 'Too long!'
-    when Time.now.hour > 21
-      puts "It's too late"
-    else
-      song.play
+      when song.name == 'Misty'
+        puts 'Not again!'
+      when song.duration > 120
+        puts 'Too long!'
+      when Time.now.hour > 21
+        puts "It's too late"
+      else
+        song.play
     end
 
     kind = case year
-           when 1850..1889 then 'Blues'
-           when 1890..1909 then 'Ragtime'
-           when 1910..1929 then 'New Orleans Jazz'
-           when 1930..1939 then 'Swing'
-           when 1940..1950 then 'Bebop'
-           else 'Jazz'
+             when 1850..1889 then 'Blues'
+             when 1890..1909 then 'Ragtime'
+             when 1910..1929 then 'New Orleans Jazz'
+             when 1930..1939 then 'Swing'
+             when 1940..1950 then 'Bebop'
+             else 'Jazz'
            end
     ```
 
-* Align function arguments either all on the same line or one per line.
+* Align function arguments either all on the same line or one per line. If args > 3
 
     ```ruby
     # good
@@ -823,7 +823,7 @@ in inheritance.
       end
     ```
 * Avoid `class << self` except when necessary, e.g. single accessors and aliased
-  attributes.
+  attributes. Ok to use this when more then one class method.
 
     ```Ruby
     class TestClass
